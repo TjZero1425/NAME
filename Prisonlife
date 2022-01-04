@@ -201,7 +201,7 @@ function prison_life()
     end)
     
     playersec:NewToggle("Noclip","Allows you to walk through wall",function(state)
-        getgenv().noclip = state
+     getgenv().noclip = state
     end)
     
     togglesec:NewToggle("GodMode","Automatically respawns you",function(state)
