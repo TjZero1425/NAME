@@ -59,7 +59,25 @@ function prison_life()
             getgenv().hipheight = tonumber(txt)
         end
     end)
+    mainsec:NewButton("No DamageFences","Removes All DamageFences",function()
+        game.Workspace.Prison_Fences:Destroy()
+        local Warehouses = game.Workspace.Warehouses
+        for i,v in pairs(Warehouses:GetDescendants()) do
+            if v.Name == "prison_fences" then
+               v:Destroy()
+            end
+        end
+    end)
     
+    mainsec:NewButton("No Trees","Removes All Trees",function()
+        game.Workspace.Trees:Destroy()
+        local Warehouses = game.Workspace.Warehouses
+        for i,v in pairs(Warehouses:GetDescendants()) do
+            if v.Name == "trees" then
+               v:Destroy()
+            end
+        end
+    end)
     
     mainsec:NewButton("No Doors","Removes All Doors",function()
         game.Workspace.Doors:Destroy()
